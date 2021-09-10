@@ -54,7 +54,7 @@ async def index_files(bot, message):
                             else:
                                 continue
                             media.file_type = file_type
-                            media.caption = f"📁 <b>Name:</b>\n━━━━━━━━━━━━━━━━━━━━━\n𝗠𝗼𝘃𝗶𝗲 𝗖𝗵𝗮𝗻𝗻𝗲𝗹: https://t.me/joinchat/MkxtxaJhFHYxZTg1\n𝗦𝗲𝗿𝗶𝗲𝘀 𝗖𝗵𝗮𝗻𝗻𝗲𝗹: https://t.me/joinchat/WQNEfDIqGDpkYzcx\n𝗠𝗼𝘃𝗶𝗲 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗚𝗿𝗼𝘂𝗽:\nhttps://t.me/joinchat/K2o-tUzqY4FjOWRl</b>",
+                            media.caption = f"📁 </b>\n━━━━━━━━━━━━━━━━━━━━━\n𝗠𝗼𝘃𝗶𝗲 𝗖𝗵𝗮𝗻𝗻𝗲𝗹: https://t.me/joinchat/MkxtxaJhFHYxZTg1\n𝗦𝗲𝗿𝗶𝗲𝘀 𝗖𝗵𝗮𝗻𝗻𝗲𝗹: https://t.me/joinchat/WQNEfDIqGDpkYzcx\n𝗠𝗼𝘃𝗶𝗲 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗚𝗿𝗼𝘂𝗽:\nhttps://t.me/joinchat/K2o-tUzqY4FjOWRl</b>",
                             await save_file(media)
                             total_files += 1
             except Exception as e:
