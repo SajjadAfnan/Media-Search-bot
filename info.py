@@ -38,3 +38,27 @@ Here you can search files in inline mode. Just press following buttons and start
 START_MSG = environ.get('START_MSG', default_start_msg)
 SHARE_BUTTON_TEXT = 'Checkout {username} for searching files'
 INVITE_MSG = environ.get('INVITE_MSG', 'Please join @.... to use this bot')
+
+
+FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "")
+OMDB_API_KEY = environ.get("OMDB_API_KEY", "")
+if FILE_CAPTION.strip() == "":
+    CUSTOM_FILE_CAPTION=None
+else:
+    CUSTOM_FILE_CAPTION=FILE_CAPTION
+if OMDB_API_KEY.strip() == "":
+    API_KEY=None
+else:
+FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "")
+OMDB_API_KEY = environ.get("OMDB_API_KEY", "")
+if FILE_CAPTION.strip() == "":
+    CUSTOM_FILE_CAPTION=None
+else:
+    CUSTOM_FILE_CAPTION=FILE_CAPTION
+if OMDB_API_KEY.strip() == "":
+    API_KEY=None
+FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "")
+if FILE_CAPTION.strip() == "":
+    CUSTOM_FILE_CAPTION=None
+else:
+    CUSTOM_FILE_CAPTION=FILE_CAPTION
