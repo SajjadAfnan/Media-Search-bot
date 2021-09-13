@@ -20,7 +20,8 @@ async def start(bot, message):
          ],[
             InlineKeyboardButton('🔍 Movie Request Group🔎', url ='https://t.me/joinchat/K2o-tUzqY4FjOWRl')                    
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
+        reply_markup = InlineKeyboardMarkup(buttons),
+        disable_web_page_preview=True
         await message.reply(START_MSG, reply_markup=reply_markup)
 
 
