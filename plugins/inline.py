@@ -40,11 +40,22 @@ async def answer(bot, query):
                                                   offset=offset)
 
     for file in files:
+        title=file.file_name
+        size=file.file_size
+        f_caption=file.caption
+        if CUSTOM_FILE_CAPTION:
+            try:
+                f_caption=CUSTOM_FILE_CAPTION.format(file_name=title, file_size=size, file_caption=f_caption)
+            except Exception as e:
+                print(e)
+                f_caption=f_caption
+        if f_caption is None:
+            f_caption = f"{file.file_name}"
         results.append(
             InlineQueryResultCachedDocument(
                 title=file.file_name,
                 file_id=file.file_id,
-                caption=file.caption or "",
+                caption=f_caption,
                 description=f'Size: {get_size(file.file_size)}\nType: {file.file_type}',
                 reply_markup=reply_markup))
 
