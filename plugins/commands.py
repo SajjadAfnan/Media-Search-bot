@@ -17,6 +17,8 @@ async def start(bot, message):
         buttons = [[
             InlineKeyboardButton('Search Movie', switch_inline_query_current_chat=''),
             InlineKeyboardButton(text=" Join Channel ", url=f"https://t.me/malik_2021_Malayalam4"),
+         ],[
+            InlineKeyboardButton('🔍 Movie Request Group🔎', url ='https://t.me/joinchat/K2o-tUzqY4FjOWRl')                    
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(START_MSG, reply_markup=reply_markup)
