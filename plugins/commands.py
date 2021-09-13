@@ -15,7 +15,7 @@ async def start(bot, message):
         await message.reply(INVITE_MSG)
     else:
         buttons = [[
-            InlineKeyboardButton('Search Movie', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('Search Movie', switch_inline_query=''),
             InlineKeyboardButton(text=" Join Channel ", url=f"https://t.me/malik_2021_Malayalam4"),
          ],[
             InlineKeyboardButton('🔍 Movie Request Group🔎', url ='https://t.me/joinchat/K2o-tUzqY4FjOWRl')                    
