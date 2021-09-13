@@ -12,8 +12,6 @@ logger = logging.getLogger(__name__)
 async def start(bot, message):
     """Start command handler"""
     if len(message.command) > 1 and message.command[1] == 'subscribe':
-        await message.reply(INVITE_MSG)
-    else:
         buttons = [[
             InlineKeyboardButton('Search Movie', switch_inline_query=''),
             InlineKeyboardButton(text=" Join Channel ", url=f"https://t.me/malik_2021_Malayalam4"),
@@ -21,6 +19,8 @@ async def start(bot, message):
             InlineKeyboardButton('🔍 Movie Request Group🔎', url ='https://t.me/joinchat/K2o-tUzqY4FjOWRl')                    
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply(INVITE_MSG, reply_markup=reply_markup, disable_web_page_preview=True)
+    else:
         await message.reply(START_MSG, reply_markup=reply_markup, disable_web_page_preview=True)
 
 
